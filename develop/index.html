@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Dashboard</h1>
+      <form>
+        <input type="text" id="city" placeholder="Enter city name...">
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+      <div class="current-weather">
+        <h2>Current Weather</h2>
+        <div id="city-name"></div>
+        <div id="date"></div>
+        <div id="icon"></div>
+        <div id="temperature"></div>
+        <div id="humidity"></div>
+        <div id="wind-speed"></div>
+      </div>
+      <div class="forecast">
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-day 1">
+          <div class="date"></div>
+          <div class="icon"></div>
+          <div class="temperature"></div>
+          <div class="humidity"></div>
+          <div class="wind-speed"></div>
+        </div>
+        <div class="forecast-day 2">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+          <div class="forecast-day 3">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+          <div class="forecast-day 4">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+          <div class="forecast-day 5">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+          <div class="forecast-day 6">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+          <div class="forecast-day 7">
+            <div class="date"></div>
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="humidity"></div>
+            <div class="wind-speed"></div>
+          </div>
+        <!-- Repeat the forecast-day div for each day of the forecast -->
+      </div>
+      <div class="search-history">
+        <h2>Search History</h2>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
