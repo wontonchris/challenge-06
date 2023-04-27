@@ -29,21 +29,23 @@ function getWeatherData(city) {
         temperature.textContent = `${data.list[0].main.temp.toFixed(1)}°C`;
         humidity.textContent = `Humidity: ${data.list[0].main.humidity}%`;
         windSpeed.textContent = `Wind Speed: ${data.list[0].wind.speed} m/s`
+      
+
 
     
         // Update 5-day forecast
+        var forecastIndex = 0;
         for (var i = 0; i < forecastDays.length; i++) {
-            var forecastIndex = i * 8 + 4;
             forecastDays[i].querySelector(".forecast-date").textContent = new Date(data.list[forecastIndex].dt_txt).toLocaleDateString();
             forecastDays[i].querySelector(".forecast-icon").innerHTML = `<img src="http://openweathermap.org/img/w/${data.list[forecastIndex].weather[0].icon}.png" alt="Weather Icon">`;
             forecastDays[i].querySelector(".forecast-temperature").textContent = `${data.list[forecastIndex].main.temp.toFixed(1)}°C`;
             forecastDays[i].querySelector(".forecast-humidity").textContent = `Humidity: ${data.list[forecastIndex].main.humidity}%`;
+            forecastIndex += 8;
         }
         })
-        .catch(error => {
-        alert("There was a problem getting the weather data.");
-        });
+      
     }
+
 
   
 
@@ -53,6 +55,7 @@ form.addEventListener("submit", event => {
   var city = cityInput.value;
   if (city) {
     getWeatherData(city);
+    
     // Add the city to the search history
     var historyList = document.querySelector("#history-list");
     var listItem = document.createElement("li");
