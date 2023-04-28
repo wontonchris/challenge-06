@@ -11,6 +11,7 @@ var humidity = document.querySelector("#humidity");
 var windSpeed = document.querySelector("#wind-speed");
 var forecastDays = document.querySelectorAll(".forecast-day");
 
+
 // Get weather data for the city
 function getWeatherData(city) {
   var url = `${apiUrl}?q=${city}&appid=${apiKey}&units=metric`;
