@@ -47,6 +47,8 @@ function getWeatherData(city) {
     });
 }
 
+
+
 // Handle form submission
 form.addEventListener("submit", (event) => {
   event.preventDefault();
