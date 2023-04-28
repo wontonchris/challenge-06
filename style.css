@@ -6,10 +6,18 @@
   
 }
 
+main {
+  background-color: #fff;
+  margin: 20px auto;
+  width: 90%;
+
+
+}
+
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  background-color: #fff;
+
 }
 
 
