@@ -22,7 +22,7 @@ async function checkWeather(city) {
 
   //display data on page
 
-  document.querySelector(".city").innerHTML = data.list[0].city; //why city.name / .name 
+  document.querySelector(".city").innerHTML = data.list[0].name;
   document.querySelector(".temp").innerHTML = data.list[0].main.temp + "°F";
   document.querySelector(".humidity").innerHTML = data.list[0].main.humidity + "%";
   document.querySelector(".wind").innerHTML = data.list[0].wind.speed + "mph";
@@ -41,3 +41,5 @@ async function checkWeather(city) {
 
 searchButton.addEventListener("click", function() {
   checkWeather(searchArea.value)});
+
+
