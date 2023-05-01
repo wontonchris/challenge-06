@@ -3,6 +3,8 @@ var API_WEATHER_URL = "https://api.openweathermap.org/data/2.5/forecast?q=";
 var searchArea = document.querySelector(".search input");
 var searchButton = document.querySelector(".search button");
 var weatherIcon = document.querySelector(".weather-icon");
+var city = document.querySelector(".city").value
+
 
 
 async function checkWeather(city) {
@@ -10,7 +12,17 @@ async function checkWeather(city) {
   var data = await response.json();
   console.log(data);
 
-  document.querySelector(".city").innerHTML = data.list[0].name;
+
+
+// //fetch
+// fetch ("${API_WEATHER_URL}${searchArea}&units=imperial&appid=${apiKey}")
+// .then(response => response.json())
+// .then(data => {
+//   console.log(data);
+
+  //display data on page
+
+  document.querySelector(".city").innerHTML = data.list[0].city; //why city.name / .name 
   document.querySelector(".temp").innerHTML = data.list[0].main.temp + "°F";
   document.querySelector(".humidity").innerHTML = data.list[0].main.humidity + "%";
   document.querySelector(".wind").innerHTML = data.list[0].wind.speed + "mph";
@@ -24,10 +36,8 @@ async function checkWeather(city) {
   } else if(data.list[0].weather[0].main == "Snow") {
     weatherIcon.src = "images/snow.png";    
   }
-  
-  
 }
 
+
 searchButton.addEventListener("click", function() {
-  checkWeather(searchArea.value);
-});
+  checkWeather(searchArea.value)});
